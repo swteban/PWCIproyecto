@@ -1,0 +1,37 @@
+
+/*Parte Lista*/
+.Columnadecontenido
+{
+    padding-top: 30px;
+    margin: 20px;
+}
+
+#descripcionCont
+{
+    text-align: justify;
+}
+
+.ImgPL{
+    max-width: 100%;
+    display: block;
+}
+
+
+/*parte Objeto */
+.ImgOBJ
+{
+    max-width: 80%;
+    height: auto;
+
+}
+
+#descripcionObj
+{
+    text-align: justify;
+}
+
+.Columnadeobjeto{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+

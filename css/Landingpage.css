@@ -1,0 +1,95 @@
+
+/*APARTADO DE CONTENIDO LANDING*/
+.Encab{
+    margin-top: 30px;
+}
+
+/*Cartas de Hecha un vistazo ******** Columna Izquierda*/
+
+.Cartacontenedor{
+    width: 100%;
+    max-height: 260px;
+}
+.DesCarta{
+ padding-top: 9px;
+}
+.Cartacuerpo{
+    background-color: rgb(0, 0, 0) !important;
+}
+.CartacuerpoM{
+    background-color: rgb(83, 75, 75) !important;
+}
+
+.btncontinuar{
+    margin-bottom: 20px;
+}
+.imagencarta{
+    width: 200px; 
+    height: 250px;
+}
+
+/*Cartas Top del momento */
+
+/*Grande*/
+.imagencitacarta{
+    height: 240px;
+}
+.apimg{
+    text-align: center;
+    margin-top: 150px;
+    color: rgb(255, 255, 255) !important;
+}
+
+.apimg > a{
+    color: rgb(255, 255, 255) !important;
+}
+
+/*Peque*/
+.imagensmallcar{
+    height: 240px;
+}
+
+.apimgsss{
+    text-align: center;
+    margin-top: 150px;
+    color: rgb(255, 255, 255) !important;
+}
+
+.apimgsss > a{
+    color: rgb(255, 255, 255) !important;
+}
+
+
+/*Listas de productos FINALES*/
+.CF{
+    text-align: center;
+}
+.cuerpoCF{
+    background-color: black !important;
+    text-align: center;
+}
+
+.imagenCF{
+    height: 240px;
+}
+
+.bodyCF{
+    background-color: black !important;
+}
+
+
+/**Modal crear objeto**/
+
+.fileimagen{
+    width: 100px;
+    overflow: hidden;
+}
+
+div.divisionCO{
+    align-items: center !important;
+}
+
+button.botoncitoCO{
+    display: inline-block;
+    color: white !important;
+}

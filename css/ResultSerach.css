@@ -1,0 +1,41 @@
+/*result busqueda*/
+
+.titlebusque{
+    margin-top: 30px;
+}
+
+.imagenbuscar{
+    text-align: center;
+    height: 150px;
+    width: 280px;
+}
+
+.search-result { 
+    margin-top: 1px; 
+}
+
+.search-result .col-md-7 { 
+    position: relative; 
+}
+.search-result h2 { 
+    margin-top: 10px !important; 
+    margin-bottom: 10px !important; 
+}
+
+.ttliga{
+    color: rgb(247, 196, 28);
+}
+
+.colimag{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 0 !important; 
+    text-align: center;
+}
+
+.search-result span.borda { 
+    display: block; 
+    width: 97%; 
+    margin: 0 15px; 
+    border-bottom: 1px dotted rgb(146, 146, 146); 
+}

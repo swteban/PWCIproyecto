@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuario</title>
+
+    <link rel="stylesheet" href="css/headerfooter.css">
+    <link rel="stylesheet" href="css/perfil.css">
+
+    <!--links para el navbar-->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/HeaderFoot.js"> </script>
+    
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+</head>
+
+<body style="background-color: rgb(240, 240, 240)">
+
+    <div id="header"></div>
+    <div class="Cotenedorgiga bg-white container py-5">
+
+        <div class="container">
+            <div class="row">
+              <div class="col-md-6 img">
+                <img src="img/avatar.png"  alt="" class="img-rounded">
+              </div>
+              <div class="col-md-6 details">
+
+                <blockquote>
+                  <h5>EstebanMartinez25</h5>
+                  <small><cite title="Source Title">Contraseña: *********** <i class="icon-map-marker"></i></cite></small>
+                </blockquote>
+                <p>
+                  swteban27@gmail.com <br><br>
+                  privado o publico
+                </p>
+
+
+                <!-- Button trigger modal -->
+                <button type="button" class="BotonCambia btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    Editar datos personales
+                </button>
+                
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    
+                    <div class="modal-dialog modal-dialog-scrollable">
+
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="exampleModalLabel">Datos de usuario</h4>
+
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+
+                                <div class="d-flex flex-column ">
+                                    <form>
+
+                                        <div class="divavatar">
+                                        <img class="avatarprincipal" src="img/avatar.png" alt="avatar">
+                                        </div>
+                                        <div class="btndivimg">
+                                        <button type="button" class="botoncambiarfoto btn btn-info btn-round">Imagen</button>
+                                        </div>
+                                        <br>
+
+                                        <p>Nombre de Usuario</p>
+                                        <input type="text" class="form-control" id="UN1"
+                                            placeholder="Username" required>
+                                        <br>
+                                        <p>Ingresa el e-mail</p>
+                                        <input type="email" class="form-control" id="Mail1"
+                                            placeholder="Correo electrónico" required>
+                                        <br>
+                                        <p>Ingresa una contraseña</p>
+                                        <input type="password" class="form-control" id="PASS1"
+                                            placeholder="Contraseña" required>
+                                        <br>
+                                        <p>Confirma la contraseña</p>
+                                        <input type="password" class="form-control" id="PASS2"
+                                            placeholder="Contraseña" required>
+                                        <br>
+                                        
+                                        <div class="divfiltro form-group">
+                                          <label>Tipo de Usuario</label>
+             
+                                          <select class="selectusuario form-control" id="selectusuarioid">
+             
+                                            <option value="public">Público</option>
+                                            <option value="private">Privado</option>
+                            
+                                          </select>
+                                        </div>
+
+                                        <br>
+                    
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                            <button type="button" class="cerrardatos btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                            <button type="button" class="guardardatos btn btn-primary">Guardar cambios</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!--Listas y creation de las mismas-->
+            <div class="apartadolist container">
+                <div class="row">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btnCreaLista btn btn-warning btn-round" data-toggle="modal" data-target="#Modallist">
+                      Crear Lista
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="Modallist" tabindex="-1" role="dialog" aria-labelledby="Modallistlabel" aria-hidden="true">
+                      
+                      <div class="modal-dialog" role="document">
+
+                        <div class="modal-content">
+
+                          <div class="modal-header">
+
+                            <h5 class="modal-title" id="Modallistlabel">Crear Lista</h5>
+
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+
+                          </div>
+                          <div class="modal-body">
+
+                            <form>
+
+                              <div class="form-group">
+   
+                                <label for="inputtextlista">Nombre de la Lista</label>
+                                <input type="text" id = "nombrelista" class="inputnamelista form-control" placeholder="lista">
+                              
+                              </div>
+
+                              <div class="form-group">
+   
+                                <label for="textarealista">Descripcion de Lista</label>
+                                <textarea class="form-control" id="textarealista" rows="3"></textarea>
+
+                              </div>
+
+                              <div class="form-group">
+                                <label for="statuslist">Visualización</label>
+   
+                                <select class="form-control" id="statuslist">
+   
+                                  <option>Pública</option>
+                                  <option>Privada</option>
+                  
+                                </select>
+                              </div>
+
+                              <div class="form-group">
+                                <label for="tlteagregaobj">Agregar objetos</label>
+                                <input type="text" id = "objetobd" class="objetoBD form-control" placeholder="Objetos de la base de datos">
+                                
+                              </div>
+
+                              <div class="form-group">
+
+                                <label for="fileimagLISTA">Imagen para la lista</label>
+                                <input type="file" class="fileimagenLISTA form-control-file" id="fileimagLista" accept=".png, .jpg, .jpeg" style="overflow: hidden;">
+                              </div>
+
+                            </form>
+
+                          </div>
+
+                          <div class="modal-footer">
+
+                            <button type="button" data-dismiss="modal" class="botonSaveL btn btn-warning">Guardar lista</button>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                </div>
+
+                <br>
+
+                <div class="row">
+                    <h3 class="pb-3 mb-4 font-italic border-bottom">
+                        Mis Listas
+                    </h3>
+                </div>
+
+                  <div class="contenedorlista card text-white bg-dark flex-md-row mb-3">
+                    <div class="listafilaaa row no-gutters">
+
+                      <div class="col-md-4">
+                        <img src="https://www.infobae.com/new-resizer/Zi4tXECtYA7gp9OcQARpUF3kv1I=/420x236/filters:format(jpg):quality(85)/s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2018/08/11152505/tendencias-sombreros-2.jpg" class="imagencarta card-img flex-auto" alt="Imagenlista">
+                      </div>
+
+                      <div class="col-md-8">
+
+                        <div class="cuerpolista card-body d-flex flex-column">
+
+                            <strong class="d-inline-block mb-2 text-white">Privada o Public</strong>
+
+                            <h4 class="mb-0 Tcarta card-title">
+                                <a class="Tcarta text-white" href="#">Titulo de Lista</a>
+                            </h4>
+
+                            <p class="Dcarta card-text mb-auto">Descripción corta de una lista</p>
+                            <br>
+
+                            <div class="botonesCL">
+                              <!-- Button trigger modal -->
+                                <a class="btnedit btn btn-outline-light btn-sm" role="button" data-toggle="modal" data-target="#Modaledit">
+                                  Editar</a>
+                                  
+                                <!-- Modal -->
+                                  <div class="ModalED modal fade" id="Modaledit" tabindex="-1" role="dialog" aria-labelledby="Mlistaedit" aria-hidden="true">
+                                    
+                                    <div class="modal-dialog" role="document">
+
+                                      <div class="modal-content">
+
+
+                                        <div class="modal-header">
+
+                                          <h5 class="modal-title" id="Mlistaedit">Editar Lista</h5>
+                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                          </button>
+
+                                        </div>
+
+                                        <div class="modal-body">
+                                          <form>
+                                            <div class="form-group Gedit">
+                
+                                              <label for="edittext">Nombre de la Lista</label>
+                                              <input type="text" id = "nombreedit" class="editname form-control">
+                                            
+                                            </div>
+
+                                            <div class="form-group Gedit">
+                
+                                              <label for="textareaedit">Descripcion de Lista</label>
+                                              <textarea class="form-control" id="textareaedit" rows="3"></textarea>
+
+                                            </div>
+
+                                            <div class="form-group Gedit">
+                                              <label for="statusedit">Visualización</label>
+                
+                                              <select class="form-control" id="statusedit">
+                
+                                                <option>Pública</option>
+                                                <option>Privada</option>
+                                
+                                              </select>
+                                            </div>
+
+                                            <div class="form-group Gedit">
+                                              <label for="TitleObjetos">Objetos de la Lista</label>                                        
+                                                <input type="text" id = "objetocargado" class="objetoload form-control" placeholder="Objetos agregados">
+                                                                                            
+                                            </div>
+
+                                            <div class="form-group edit">
+
+                                              <label for="fileimagEdit">Imagen cargada</label>
+                                              <input type="file" class="fileimagenEdit form-control-file" id="fileimagEdit" accept=".png, .jpg, .jpeg" style="overflow: hidden;">
+                                            </div>
+                                          </form>
+                                        </div>
+
+                                        <div class="modal-footer">
+                                          <button type="button" data-dismiss="modal" class="botonSaveEdit btn btn-warning">Guardar edición</button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                
+                                <a class="btnelim btn btn-outline-light btn-sm" role="button" data-toggle="modal" data-target="#staticBackdrop">Eliminar</a>
+
+                                <!-- Modal -->
+                                <div class="ModalElimina modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                  
+                                  <div class="modal-dialog">
+
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel">Eliminar Lista</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                        </button>
+                                      </div>
+                                      <div class="modal-body">
+                                        <label>¿Estás seguro de eliminar la lista?</label>
+                                      </div>
+
+                                      <div class="modal-footer">
+                                        <button type="button" class="btncancelaE btn btn-dark" data-dismiss="modal">Cancelar</button>
+                                        <button type="button" class="btnelimnaE btn btn-warning" data-dismiss="modal">Eliminar</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                            </div>
+                          
+                        </div>
+
+                      </div>
+
+                    </div>
+                    
+                  </div> 
+
+            </div>
+
+          </div>
+
+    </div>
+
+    <div id="footer"></div>
+    
+</body>
+</html>
