@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Style Collective </title>
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+    <link rel="stylesheet" href="css/LoginRegister.css"> 
+
+</head>
+
+<body style="background-color: rgb(240, 240, 240);">
+    <div class="container">
+        <div class="row">
+
+        <div class="sidenav">
+          <div class="login-main-text col">
+              <div class="login-image"><img class="logo" src="img/LogoVec.png" alt="Logotipo"></div>
+            <h2>The Style Collective</h2>
+            <p>Inicia sesión o regístrate para acceder a la página</p>
+          </div>
+        </div>
+
+          <div class="main col">
+            <div class="divmaincol">
+            <div class="login-form">
+                <form style=>
+                    <br> 
+                    <br>
+                    <h2>¡Bienvenido!</h2>
+                    <br>
+                    <div class="form-group">
+                        <label><strong>Usuario</strong></label>
+                        <input type="text" class="form-control" id="formula1" placeholder="Username">
+                    </div>
+                    <div class="form-group">
+                        <label><strong>Contraseña</strong></label>
+                        <input  type="password" class="form-control" id="formula" placeholder="Password">
+                    </div>
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col botonlogin">
+                               <!-- <a href="Landingpage.html" class="btn btn-black"><strong>Ingresar</strong></a> -->
+                               <button type="button" class="btn btn-black" id="ingresa"  >Ingresar</button>
+                            </div>
+                        </div>
+                            
+                <!--Registrarse-->
+                <div class="row">
+                <form class="BotonForm form-inline my-2 my-lg-0">
+                    <div class="col botonReg">
+                        <br>
+                        <p>¿Aún no eres parte?</p>
+                        <hr>
+
+                            <button type="button" class="btn btn-secondary" data-toggle="modal"
+                                data-target="#loginModal">
+                                <strong>Regístrate</strong>
+                            </button>
+                    </div>
+
+                    <div class="Login modal fade" id="loginModal" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+                        <div class="LoginBox modal-dialog modal-dialog-centered" role="document">
+
+                            <div class="LoginModal modal-content">
+
+                                <div class="modal-header border-bottom-0">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+
+                                <div class="Textos modal-body">
+                                    <div class="form-title">
+                                        <h3 class="Bienvenido"><strong>Regístrate</strong></h3>
+                                        <h5>Es fácil y rápido.</h5>
+                                        <hr>
+                                    </div>
+                                    <br>
+                                        <div class="d-flex flex-column ">
+                                            <form>
+                                                <div class="divavatar">
+                                                    <p>Elige una imagen de perfil </p>
+                                                    <div class="divavatar">
+                                                        <img class="avatarprincipal" src="img/wom.jpg" alt="avatar" style="width:150px;">
+                                                        <img class="avatarprincipal" src="img/man.jpg" alt="avatar1" style="width:150px;">
+                                                    </div>
+    
+                                                    <select class="selectavatar form-control" id="selectavatarini">
+                           
+                                                        <option value="1" >Avatar 1</option>
+                                                        <option value="2" >Avatar 2</option>
+                                        
+                                                      </select>
+                                                </div>
+                                                <br>
+                                                <p>Escoge un nombre de Usuario</p>
+                                                <input type="text" class="form-control" id="NU"
+                                                    placeholder="Username" required>
+                                                <br>
+                                                <p>Ingresa tu e-mail</p>
+                                                <input type="email" class="form-control" id="Email"
+                                                    placeholder="Correo electrónico" required>
+                                                <br>
+                                                <p>Ingresa una contraseña</p>
+                                                <input type="password" class="form-control" id="contraseña"
+                                                    placeholder="Contraseña" required>
+                                                <br>
+
+                                                <div class="divfiltroP form-group">
+                                                    <label>Tipo de Usuario</label>
+                       
+                                                    <select class="selectusuarioP form-control" id="selectusuarioidP">
+                       
+                                                      <option value="1" >Público</option>
+                                                      <option value="0" >Privado</option>
+                                      
+                                                    </select>
+                                                  </div>
+
+                                                  <br>
+                                                 
+
+
+
+                                                <br>
+                                                
+                                                <button type="button" class="btn btn-danger" id="btnCreaC">Crear</button>
+                                                
+                                               <!-- <a href="Landingpage.html" class="btn btn-danger"><strong>Acceder</strong></a>-->
+                                                
+
+                                            </form>
+                                        </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+
+
+                        </div>
+                    </div>
+                    
+                </form>
+            </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    
+      <script src="js/iniciarSesion.js"></script>
+      <script src="js/crearCuenta.js"></script>
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>    
+
+      <br>
+      <br>
+      <br>
+</body>
+
+</html>

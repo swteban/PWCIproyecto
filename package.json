@@ -1,0 +1,31 @@
+{
+  "name": "pwciproyecto",
+  "version": "1.0.0",
+  "description": "Proyecto de PWCI avances y así",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/swteban/PWCIproyecto.git"
+  },
+  "keywords": [
+    "nodejs",
+    "api",
+    "pwci"
+  ],
+  "author": "Samara Hirashi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/swteban/PWCIproyecto/issues"
+  },
+  "homepage": "https://github.com/swteban/PWCIproyecto#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "multer": "^1.4.2",
+    "mysql": "^2.18.1"
+  }
+}

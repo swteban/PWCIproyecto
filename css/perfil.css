@@ -1,0 +1,111 @@
+.container{
+    padding:5%;
+}
+.container .img{
+    text-align:center;
+}
+.container .details{
+    border-left:3px solid #ded4da;
+}
+.container .details p{
+    font-size:15px;
+    font-weight:bold;
+}
+
+.img{
+    align-items: center;
+    text-align: center;
+    padding-bottom: 50px;
+    padding-top: 0px;
+
+}
+
+.img-rounded{
+    height: 200px;
+    text-align: center;
+    display: inline-block;
+}
+
+
+/*Cambiar datos de usuario*/
+
+.avatarprincipal{
+    align-items: center;
+    text-align: center;
+    width: 50%;
+    padding-bottom: 50px;
+    padding-top: 0px;
+}
+
+.divavatar{
+    text-align: center;
+    display: inline-block;
+}
+
+.botoncambiarfoto{
+    background-color:rgb(247, 196, 28) !important;
+}
+
+.btndivimg{
+    text-align: center;
+}
+
+.guardardatos{
+    background-color:rgb(247, 196, 28) !important;
+}
+
+.BotonCambia{
+    background-color: #383838 !important;
+}
+
+.btnCreaLista{
+    background-color:rgb(247, 196, 28) !important;
+    color: white !important;
+}
+
+/*apartado de lista*/
+.apartadolist{
+    margin-bottom: 5px;
+}
+.imagencarta{
+    width: 250px; 
+    height: 200px;
+}
+
+.botonesCL{
+    align-items: flex-end;
+    text-align: right;
+}
+
+.listafilaaa{
+    background-color: black !important;
+    width: 100%;
+    
+}
+.Dcarta, .Tcarta{
+    overflow: hidden;
+}
+
+
+/*Crear lista btn*/
+.botonSaveL{
+    background-color:rgb(247, 196, 28) !important;
+    color: white !important;
+}
+
+/*Editar Lista*/
+.ModalED{
+    color: black;
+    align-items: flex-start;
+    text-align: left;
+    overflow: hidden;
+}
+
+.ModalElimina{
+    color: black;
+    align-items: flex-start;
+    text-align: left;
+    overflow: hidden;
+}
+
+

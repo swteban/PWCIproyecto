@@ -1,0 +1,132 @@
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.logo{
+    text-align: center;
+    height: 200px;
+    width: 200px;
+    overflow: hidden;
+}
+
+
+.main-head{
+    height: 150px;
+    background: #FFF;
+}
+
+.sidenav {
+    height: 100%;
+    background-color: #000;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.main {
+    padding: 40px;
+}
+
+
+@media screen and (min-width: 768px){
+    .main{
+        margin-left: 40%; 
+    }
+
+    .sidenav{
+        text-align: center;
+        width: 40%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+    }
+
+    .login-form{
+        margin-top: 10%;
+    }
+
+}
+
+.login-main-text{
+    text-align: center;
+    margin-top: 10%;
+    padding: 60px;
+    color: #fff;
+}
+
+.login-main-text h2{
+    font-weight: 300;
+}
+
+.botonlogin{
+    text-align: center;
+    padding: 5px;
+}
+
+.botonReg{
+    text-align: center;
+    padding: 5px;
+}
+
+.btn-black{
+    text-align: center;
+    background-color: rgb(247, 196, 28) !important;
+    color: #fff;
+    width: 100%;
+}
+
+.btn-secondary{
+    padding-top: 5px;
+    text-align: center;
+    background-color: rgb(0, 0, 0) !important;
+    color: #fff;
+    width: 100%;
+}
+
+
+
+
+
+
+/*******FORM REGISTRARSE*********/
+
+/*Modal box LogIn*/
+
+ .LoginModal{
+    background-color: rgb(236, 231, 234); 
+    color: black;
+}
+
+.form-title{
+    margin-left: 20px;
+}
+h3.Bienvenido  {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h4.SegTitulo {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.d-flex{
+    margin-right: 40px;
+    margin-left: 40px;
+}
+.btn-danger{
+    margin-bottom: 30px;
+    text-align: center;
+    background-color: rgb(247, 196, 28) !important;
+    color: #fff;
+}
+
+.avatarprincipal{
+    align-items: center;
+    text-align: center;
+    width: 50%;
+    padding-bottom: 50px;
+    padding-top: 0px;
+}
+
+.divavatar{
+    text-align: center;
+    display: inline-block;
+}

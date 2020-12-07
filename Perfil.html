@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuario</title>
+
+    <link rel="stylesheet" href="css/headerfooter.css">
+    <link rel="stylesheet" href="css/perfil.css">
+
+    <!--links para el navbar-->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/HeaderFoot.js"> </script>
+    
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+</head>
+
+<body style="background-color: rgb(240, 240, 240)">
+    <div id="header"></div>
+    <div class="Cotenedorgiga bg-white container py-5">
+
+        <div class="container">
+            <div class="row">
+              <div id="fotoP" class="col-md-6 img">
+               <!-- <img src="img/avatar.png"  alt="" class="img-rounded">-->
+              </div>
+              <div class="col-md-6 details" >
+
+                <div id="datosP">
+
+                  <blockquote>
+                    <h5 id="usuario">Usuario</h5>
+                    <h6 id="Nombre">Nombre</h6>
+                    <small><cite title="Source Title">Contraseña: ******* <i class="icon-map-marker"></i></cite></small>
+                  </blockquote>
+                  <h2 id="Correo">Correo</h2>
+		     	      	<h6 id="PoP">Privado o publico</h6>
+                </div>
+                
+
+
+                <!-- Button trigger modal -->
+                <button type="button" class="BotonCambia btn btn-primary" id="editar" data-toggle="modal" data-target="#exampleModal">
+                    Editar datos personales
+                </button>
+              <a href="LoginWelcome.html">
+                <button type="button" class="BotonLogOut btn btn-warning" id="logout">
+                  Log Out
+              </button>
+                </a>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    
+                    <div class="modal-dialog modal-dialog-scrollable">
+
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="exampleModalLabel">Datos de usuario</h4>
+
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+
+                                <div class="d-flex flex-column ">
+                                    <form>
+
+                                        <div class="divavatar">
+                                       <img class="avatarprincipal" src="img/wom.jpg" alt="avatar" style="width:220px;">
+                                       <img class="avatarprincipal" src="img/man.jpg" alt="avatar1" style="width:220px;">
+                                        </div>
+
+                                        <div class="form-group">
+                                          <p>Foto de Perfil</p>
+                                          <input type="radio" id="womi" name="Radio1" value="publico">
+                                          <label for="publico">Avatar 1</label><br>
+                                          <input type="radio" id="man" name="Radio1" value="privado">
+                                          <label for="privado">Avatar 2</label><br>
+                                        </div>
+                                       
+                                        <br>
+
+                                        <p>Nombre de Usuario</p>
+                                        <input type="text" class="form-control"
+                                            placeholder="Username"  id="nombreE" name="nombreE" required>
+                                        <br>
+                                        <p>Ingresa el e-mail</p>
+                                        <input type="email" class="form-control"
+                                            placeholder="Correo electrónico" id="correoE"
+                                            name="correoE" required>
+                                        <br>
+                                        <p>Ingresa una contraseña</p>
+                                        <input type="password" class="form-control" id="contrasenaE"
+                                        name="contrasenaE" placeholder="Contraseña" required>
+                                        <br>
+                                        
+                                        
+                                        <div class="form-group">
+                                          <p>Tipo de Perfil</p>
+                                          <input type="radio" id="publicoE" name="Radio" value="publico">
+                                          <label for="publico">Publico</label><br>
+                                          <input type="radio" id="privadoE" name="Radio" value="privado">
+                                          <label for="privado">Privado</label><br>
+                                        </div>
+
+                                        <br>
+                    
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                            <button type="button" class="cerrardatos btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                            <button type="button" class="guardardatos btn btn-primary" id="Editadito" >Guardar cambios</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!--Listas y creation de las mismas-->
+            <div class="apartadolist container" >
+                <div class="row">
+
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btnCreaLista btn btn-warning btn-round" id="agregar" data-toggle="modal" data-target="#Modallist">
+                      Crear Lista
+                    </button>
+                    <label>...</label>
+                    <a class="btnCreaLista btn btn-warning btn-round" role="button" data-toggle="modal" data-target="#Modaledit" id="edit">
+                      Editar Lista</a>
+                      <label>...</label>
+                      <a class="btnCreaLista btn btn-warning btn-round" role="button" data-toggle="modal" data-target="#staticBackdrop" 
+                      id="elimi">Eliminar Lista</a>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="Modallist" tabindex="-1" role="dialog" aria-labelledby="Modallistlabel" aria-hidden="true">
+                      
+                      <div class="modal-dialog" role="document">
+
+                        <div class="modal-content">
+
+                          <div class="modal-header">
+
+                            <h5 class="modal-title" id="Modallistlabel">Crear Lista</h5>
+
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+
+                          </div>
+                          <div class="modal-body">
+
+                            <form>
+
+                              <div class="form-group">
+   
+                                <label for="inputtextlista">Nombre de la Lista</label>
+                                <input type="text" id="TituloLista" class="inputnamelista form-control" placeholder="lista">
+                              
+                              </div>
+
+                              <div class="form-group">
+   
+                                <label for="textarealista">Descripcion de Lista</label>
+                                <textarea class="form-control" id="descripcion" rows="3"></textarea>
+
+                              </div>
+
+                              
+
+                              <div class="row">
+                                <div class="col-5">
+                                  <!--Accesorios prendas zapatos-->
+                                  <div class="form-group">
+                                      <label for="exampleFormControlSelect2">Secciones</label>
+                                      <div class="form-check">
+                                      <input type="checkbox" id="ac" name="vehicle1" value="AC">
+                                      <label for="vehicle1"> Accesorios</label><br>
+                                      <input type="checkbox" id="pe" name="vehicle2" value="PE">
+                                      <label for="vehicle2"> Prendas</label><br>
+                                      <input type="checkbox" id="zp" name="vehicle3" value="ZP">
+                                      <label for="vehicle3"> Zapatos</label><br>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                      
+                                  <div class="form-group">
+                                      <label for="exampleFormControlSelect2">Privado o Publico</label>
+                                      <br>
+                                      <form name="radioPoP">
+                                      <div class="radio" name="Radio">
+                                      <label><input type="radio" name="optradio" value="1">Publico</label>
+                                      </div>
+                                      <div class="radio">
+                                      <label><input type="radio" name="optradio" value="0">Privado</label>
+                                      </div>
+                                    </form>
+                                    </div>
+                                  </div>
+                              
+                            </div>
+
+                            <div class="row" id="listaCrear">
+                              <div class="col-10" id="listasElemento">
+                                <div id="lista1">
+                                <div class="form-group" >
+                                    <h3>Elemento 1</h3>
+                                    <label for="exampleFormControlInput1">Titulo</label>
+                                    <br>	
+                                    <input class="form-control" type="text" id="pin1" name="pin" maxlength="	100" size="100">
+                                </div><br>
+                                <div class="form-group">
+                                  <label for="exampleFormControlSelect1">Descripción</label>
+                                  <br>
+                                  <textarea class="form-control" name="message" rows="10" cols="100" id="desc1"></textarea>
+                                  
+                                </div>
+                                
+                                <hr>
+                                </div>
+                                
+                      
+                              </div>
+                            
+                              <div class="col-2" id="agrega">
+                                  
+                                  <button type="button" class="btn" id="btn" name="mas">+</button>
+                                  <button type="button" class="btn" id="btn" name="menos">-</button>
+                              </div>
+                            
+                            </div>
+
+                            </form>
+
+                          </div>
+
+                          <div class="modal-footer">
+                            <!--<button type="button" class="btn" id="btnCrea">Crear Lista</button>-->
+                            <button type="button" data-dismiss="modal" class="botonSaveL btn btn-warning" id="btnCrea">Crear lista</button>
+                            
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                </div>
+
+                <br>
+
+              <!-- AQUI EDITAR VENTANA MODAL-->
+              <div class="botonesCL">
+                
+                  
+                    
+                  <!-- Modal -->
+                    <div class="ModalED modal fade" id="Modaledit" tabindex="-1" role="dialog" aria-labelledby="Mlistaedit" aria-hidden="true">
+                      
+                      <div class="modal-dialog" role="document">
+
+                        <div class="modal-content">
+
+
+                          <div class="modal-header">
+
+                            <h5 class="modal-title" id="Mlistaedit">Editar Lista</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+
+                          </div>
+
+                          <div class="modal-body">
+                            <form>
+                              <div class="form-group Gedit">
+  
+                                <label for="edittext">Introduzca el ID de la lista</label>
+                                <input type="text" id = "idlist" class="editname form-control">
+                              
+                              </div>
+
+                              <div class="form-group Gedit">
+  
+                              <label for="edittext">Nombre de la Lista</label>
+                              <input type="text" id = "nombreedit" class="editname form-control">
+                            
+                              </div>
+
+                              <div class="form-group Gedit">
+  
+                                <label for="textareaedit">Descripcion de Lista</label>
+                                <textarea class="form-control" id="descripcionedit" rows="3"></textarea>
+
+                              </div>
+
+                              <div class="form-group">
+                                <p>Tipo de Visualización</p>
+                                <input type="radio" id="publicoEd" name="Radio" value="publico">
+                                <label for="publico">Publico</label><br>
+                                <input type="radio" id="privadoEd" name="Radio" value="privado">
+                                <label for="privado">Privado</label><br>
+                              </div>
+
+                        
+
+                            </form>
+                          </div>
+
+                          <div class="modal-footer">
+                            <button type="button" data-dismiss="modal" class="botonSaveEdit btn btn-warning" id="botoneditguardar">Guardar edición</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  
+                
+                  
+                  <!--AQUI ELIMINAR VENTANA MODAL-->
+                  <div class="ModalElimina modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    
+                    <div class="modal-dialog">
+
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="staticBackdropLabel">Eliminar Lista</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                       
+  
+                        <label for="edittext">Introduzca el ID de la lista</label>
+                        <input type="text" id = "idlistelimi" class="editname form-control" required>
+                        <br>
+                          <label>¿Estás seguro de eliminar la lista?</label>
+                        </div>
+
+                        <div class="modal-footer">
+                          <button type="button" class="btncancelaE btn btn-dark" data-dismiss="modal">Cancelar</button>
+                          <button type="button" class="btnelimnaE btn btn-warning" data-dismiss="modal" id="confirmarelimi">Eliminar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+              </div>
+
+
+              
+
+
+
+
+              <!---->
+                <div class="row">
+                    <h3 class="pb-3 mb-4 font-italic border-bottom">
+                        Mis Listas
+                    </h3>
+                </div>
+
+                <div id="ListasUsuario">
+		
+	
+                </div>
+
+            </div>
+
+          </div>
+
+    </div>
+
+    <script src="js/paginaPerfil.js"></script>
+    <script src="js/crearLista.js"></script>
+    <div id="footer"></div>
+    
+</body>
+</html>
