@@ -33,12 +33,7 @@ $("[name ='menos']").click(function(){
 
 $("#btnCrea").click(function(){
     var secciones = 0;
-    var xbox = 0;
-    var play = 0;
-    var nintendo = 0;
-    var pc = 0;
-    var android = 0;
-    var ios = 0;
+    
 
     var accesorios=0;
     var prendas=0;
@@ -46,12 +41,7 @@ $("#btnCrea").click(function(){
 
     //Accesorios, prendas, zapatos
 
-    var xboxYA = false;
-    var playYA = false;
-    var nintendoYA = false;
-    var pcYA = false;
-    var androidYA = false;
-    var iosYA = false;
+    
     var accesoriosYA=false;
     var prendasYA=false;
     var zapatosYA=false;
@@ -196,13 +186,13 @@ $("#btnCrea").click(function(){
             });
         }
         else{
-            console.log("hola");
+            console.log("Si ");
         }
     }
     req3.send();
 
   
-        window.location = 'Perfil.html';
+     window.location = 'Perfil.html';
     
    
 })

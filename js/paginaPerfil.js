@@ -138,7 +138,7 @@ function EliminarList(){
     })
   );
 
-  console.log("Exito mi pricha");
+  console.log("Exito al eliminar la lista");
 
   onclick = location.reload();
 
