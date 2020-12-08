@@ -26,8 +26,11 @@ app.get("/user", (req, res) => {
   );
 });
 
+app.listen(port, () => {
+  console.log(`Example app listening at http://localhost:${port}`);
+});
 
-///////////////////////////---------CREAR CUENTA--------------/////////////////////////////////////////////////////////////////
+//.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.U S U A R I O S.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-//
 
 app.post("/user", (req, res) => {
   connection.query(
@@ -39,11 +42,19 @@ app.post("/user", (req, res) => {
   );
 });
 
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
+app.post("/editar", (req, res) => {
+  connection.query(
+    `UPDATE usuario SET Correo= '${req.body.Correo}', NombreUsuario = '${req.body.NombreUsuario}', Contraseña= '${req.body.Contraseña}', 
+    PoP = ${req.body.PoP}, Foto=${req.body.Foto} WHERE IdUsuario = ${req.body.IdUsuario}`,
+    function (err, rows, fields) {
+      if (err) throw err;
+      res.send(rows);
+    }
+  );
 });
 
-///////////////////////////----------INICIO----------------////////////////////////////////////////////////////////////
+
+//.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.V I S T A S.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-..-.-..-.-.-//
 
 app.get("/user/:id", (req, res) => {
   connection.query(
@@ -93,49 +104,6 @@ app.get("/busquedanombre/:busca", (req, res) => {
   );
 });
 
-
-/////////////////////----------------CrearCuenta----------------//////////////////////////////////////
-
-
-app.post("/editar", (req, res) => {
-  connection.query(
-    `UPDATE usuario SET Correo= '${req.body.Correo}', NombreUsuario = '${req.body.NombreUsuario}', Contraseña= '${req.body.Contraseña}', 
-    PoP = ${req.body.PoP}, Foto=${req.body.Foto} WHERE IdUsuario = ${req.body.IdUsuario}`,
-    function (err, rows, fields) {
-      if (err) throw err;
-      res.send(rows);
-    }
-  );
-});
-
-//aqui la de editars
-
-app.post("/updatear", (req, res) => {
-  connection.query(
-    `UPDATE Listas SET NombreLista= '${req.body.NombreLista}', PrivPub = ${req.body.PrivPub}, 
-    Descripcion = '${req.body.Descripcion}' WHERE IdLista = ${req.body.IdLista}`,
-    function (err, rows, fields) {
-      if (err) throw err;
-      res.send(rows);
-    }
-  );
-});
-
-//aqui la de eliminars 
-
-app.post("/eliminar/:idlist", (req, res) => {
-  connection.query(
-    `call EliminarLista(${req.params.idlist});`,
-    function (err, rows, fields) {
-      if (err) throw err;
-      res.send(rows);
-    }
-  );
-});
-
-///////////////////----------------VER LISTAS-----------------//////////////////////////////////
-
-
 app.get("/verLista/:nombre", (req, res) => {
   connection.query(
     `call VerLista("${req.params.nombre}");`,
@@ -145,9 +113,6 @@ app.get("/verLista/:nombre", (req, res) => {
     }
   );
 });
-
-
-/////////////////////////----------Pagina Perfil--------------//////////////////////////////////
 
 app.get("/verListaUsuario/:id", (req, res) => {
   connection.query(
@@ -159,8 +124,6 @@ app.get("/verListaUsuario/:id", (req, res) => {
   );
 });
 
-//////////////////////----------autorLista------------------///////////////////////////
-
 app.get("/verAutorLista/:nombre", (req, res) => {
   connection.query(
     `call AutorDeLista("${req.params.nombre}");`,
@@ -170,7 +133,6 @@ app.get("/verAutorLista/:nombre", (req, res) => {
     }
   );
 });
-
 
 app.get("/verListaUsuarioP/:nombre", (req, res) => {
   connection.query(
@@ -182,22 +144,9 @@ app.get("/verListaUsuarioP/:nombre", (req, res) => {
   );
 });
 
-
-//////////////////////////--------Crear Listas-------------///////////////////////////////////
-
 app.get("/Secciones", (req, res) => {
   connection.query(
     `call Secciones()`,
-    function (err, rows, fields) {
-      if (err) throw err;
-      res.send(rows);
-    }
-  );
-});
-
-app.post("/agregarLista", (req, res) => {
-  connection.query(
-    `call AgregaLista('${req.body._NombreLista}', ${req.body._PrivPub}, ${req.body._Autor}, '${req.body._Descripcion}')`,
     function (err, rows, fields) {
       if (err) throw err;
       res.send(rows);
@@ -215,6 +164,39 @@ app.get("/IdLista/:_NombreLista", (req, res) => {
   );
 });
 
+//.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-L I S T A S.-.-.-.-.-.-.-.-.-.-.-.-
+app.post("/updatear", (req, res) => {
+  connection.query(
+    `UPDATE Listas SET NombreLista= '${req.body.NombreLista}', PrivPub = ${req.body.PrivPub}, 
+    Descripcion = '${req.body.Descripcion}' WHERE IdLista = ${req.body.IdLista}`,
+    function (err, rows, fields) {
+      if (err) throw err;
+      res.send(rows);
+    }
+  );
+});
+
+
+app.post("/eliminar/:idlist", (req, res) => {
+  connection.query(
+    `call EliminarLista(${req.params.idlist});`,
+    function (err, rows, fields) {
+      if (err) throw err;
+      res.send(rows);
+    }
+  );
+});
+
+app.post("/agregarLista", (req, res) => {
+  connection.query(
+    `call AgregaLista('${req.body._NombreLista}', ${req.body._PrivPub}, ${req.body._Autor}, '${req.body._Descripcion}')`,
+    function (err, rows, fields) {
+      if (err) throw err;
+      res.send(rows);
+    }
+  );
+});
+
 app.post("/agregarSeccionLista", (req, res) => {
   connection.query(
     `call agregarSeccion(${req.body.idS}, ${req.body.idL})`,
@@ -225,7 +207,6 @@ app.post("/agregarSeccionLista", (req, res) => {
   );
 });
 
-
 app.post("/agregarElemento", (req, res) => {
   connection.query(
     `call agregarElemento('${req.body._titulo}', '${req.body._Descripcion}', ${req.body._IdLista})`,
@@ -235,3 +216,12 @@ app.post("/agregarElemento", (req, res) => {
     }
   );
 });
+
+
+
+
+
+
+
+
+

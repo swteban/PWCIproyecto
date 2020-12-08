@@ -21,7 +21,8 @@ Descripcion text not null,
 constraint FK_Lista_Usuario foreign key (Autor) references Usuario(IdUsuario)
 );
 
-
+select * from Listas;
+update Listas set NombreLista="Cosas" where IdLista = 56;
 insert into Listas set NombreLista = 'Wishlist', PrivPub = 1, Autor = 1, Descripcion = 'Cosas que quiero comprar';
 insert into Listas set NombreLista = 'Atuendos', PrivPub = 1, Autor = 1, Descripcion = 'Artículos que tengo en casa';
 insert into Listas set NombreLista = 'Accesorios', PrivPub = 1, Autor = 1, Descripcion = 'Accesorios que me gustaría obtener';
@@ -58,11 +59,11 @@ IdLista int unsigned,
 constraint FK_ElementoL_Listas foreign key (IdLista) references Listas(IdLista)
 );
 
-
+select * from ElementoLista;
 insert into ElementoLista set Titulo = 'Aretes Negros', Descripcion = 'Unos Aretes Negros', IdLista = 22;
 insert into ElementoLista set Titulo = 'Brazalete de Oro', Descripcion = 'Un Brazalete de Oro blanco', IdLista = 22;
 insert into ElementoLista set Titulo = 'Collar de Plata', Descripcion = 'Un Collar de Plata', IdLista = 22;
 insert into ElementoLista set Titulo = 'Reloj', Descripcion = 'Un Reloj Azul', IdLista = 22;
 
-insert into ElementoLista set Titulo = 'Chaqueta de Piel', Descripcion = 'Una Chaqueta de Piel', IdLista = 27;
+insert into ElementoLista set Titulo = 'Chaqueta de Piel', Descripcion = 'Una Chaqueta de Piel', IdLista = 24;
 

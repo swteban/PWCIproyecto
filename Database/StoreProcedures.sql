@@ -117,6 +117,7 @@ END
 //
 DELIMITER ;
 
+call IdListaAutor('Sep');
 
 
 DELIMITER //
