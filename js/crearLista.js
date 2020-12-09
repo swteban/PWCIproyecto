@@ -31,7 +31,7 @@ $("[name ='menos']").click(function(){
     
 });
 
-$("#btnCrea").click(function(){
+$("#btnCrea").click(async function(){
     var secciones = 0;
     
 
@@ -90,17 +90,24 @@ $("#btnCrea").click(function(){
         //poner los demas
     }
 
-    var req = new XMLHttpRequest();
-    req.open("POST", "http://localhost:8888/agregarLista", true);
-    req.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-    req.send(
-      JSON.stringify({
-        _NombreLista: tituloL,
-        _PrivPub: PoP,
-        _Autor: ID,
-        _Descripcion: desc
-      })
-    );
+   await new Promise(resolve=>{
+       
+        var req = new XMLHttpRequest();
+        req.open("POST", "http://localhost:8888/agregarLista", true);
+        req.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+        req.send(
+        JSON.stringify({
+            _NombreLista: tituloL,
+            _PrivPub: PoP,
+            _Autor: ID,
+            _Descripcion: desc
+        })
+        );
+        req.onload = function(){
+            resolve()
+        }
+        
+    })
 
     var req3 = new XMLHttpRequest();
     req3.open("GET",`http://localhost:8888/IdLista/${tituloL}`, true);
@@ -119,7 +126,9 @@ $("#btnCrea").click(function(){
                     {
                         var req2 = new XMLHttpRequest();
                         req2.open("POST", "http://localhost:8888/agregarSeccionLista", true);
+                    
                          req2.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+                         
                          req2.send(
                            JSON.stringify({
                             idS: accesorios,
@@ -167,7 +176,7 @@ $("#btnCrea").click(function(){
                      if(tituliElemento==""){
                          alert("Te falto el titulo del elemento"+ (ll+1));
                      }else{
-                         //poner lo otro
+                         
                      }
                      var req5 = new XMLHttpRequest();
                      req5.open("POST", "http://localhost:8888/agregarElemento", true);
@@ -192,7 +201,7 @@ $("#btnCrea").click(function(){
     req3.send();
 
   
-     window.location = 'Perfil.html';
+     //window.location = 'Perfil.html';
     
    
 })

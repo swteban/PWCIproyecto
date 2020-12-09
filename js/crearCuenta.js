@@ -26,16 +26,7 @@ function crearCuenta(){
       //poner lo otro
     }
    let radioV=document.getElementById("selectusuarioidP").value;
-    //var radios = document.getElementsById("selectusuarioidP");
-   // for (var i = 0, length = radios.length; i < length; i++) {
-     // if (radios[i].checked) {
-        // do whatever you want with the checked radio
-       // radioV= radios[i].value;
-      // radioV=radios.value;
-        // only one radio can be logically checked, don't check the rest
-       // break;
-      //}
-    //}
+   
 
     let radioA=document.getElementById("selectavatarini").value;
 

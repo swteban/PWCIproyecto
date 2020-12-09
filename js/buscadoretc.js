@@ -46,7 +46,7 @@ function buscarL(){
             });
         }
         else{
-            console.log("hola");
+            console.log("Error");
         }
     }
     req.send();
@@ -111,7 +111,7 @@ function buscarUsu(){
             });
         }
         else{
-            console.log("NOOOOO");
+            console.log("Error");
         }
     }
     req2.send();   
@@ -164,7 +164,7 @@ function buscarAC(){
             });
         }
         else{
-            console.log("hola");
+            console.log("Error");
         }
     }
     req.send();
@@ -218,7 +218,7 @@ function buscarPE(){
             });
         }
         else{
-            console.log("hola");
+            console.log("Error");
         }
     }
     req.send();
@@ -272,7 +272,7 @@ function buscarZP(){
             });
         }
         else{
-            console.log("hola");
+            console.log("Error");
         }
     }
     req.send();
@@ -352,7 +352,7 @@ function fetch(){
             });
         }
         else{
-            console.log("hola");
+            console.log("Error");
         }
     }
     req.send();
