@@ -200,7 +200,7 @@ $("#btnCrea").click(async function(){
     }
     req3.send();
 
-  
+    alert("Lista creada");
      //window.location = 'Perfil.html';
     
    

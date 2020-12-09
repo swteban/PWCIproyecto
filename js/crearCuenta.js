@@ -21,9 +21,8 @@ function crearCuenta(){
     let Contra = document.getElementById("contraseña").value;
     let Correo = document.getElementById("Email").value;
     if(NU==""||Contra==""||Correo==""){
-      alert("Te falto un campo");
+      alert("Por favor completa todos los campos");
     }else{
-      //poner lo otro
     }
    let radioV=document.getElementById("selectusuarioidP").value;
    
